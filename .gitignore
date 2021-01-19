@@ -1,5 +1,5 @@
 * .iml
-local.properties
+* .properties
 
 # Gradle :
 .idea / ** / gradle.xml
