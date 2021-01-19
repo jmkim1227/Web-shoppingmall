@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="com.care.mybatis.myMapper">
+	<select id="user_check" resultType="memberVO">
+		select * from memberinfo where id=#{id}
+	</select>
+	
+	
+	<!--  회원가입 -->
+	<insert id="signup" parameterType="memberVO">
+         insert into memberinfo(Id,Pwd,Name,Tel,Birth,Email,Address)
+         values(#{Id},#{Pwd},#{Name},#{Tel},to_date(#{Birth},'YYYY-MM-DD'),#{Email},#{Address})
+    </insert>
+    
+    <!--  상품목록 불러오기 -->
+    <select id="goodsList" resultType="clientGoodsVO">
+    	select  * from goodsinfo order by goodsnum desc
+    </select>
+    
+    <!-- 상품 조회 -->
+	<select id="goodsView" resultType="clientGoodsVO">
+		 select * from goodsinfo where goodsNum = #{goodsNum}
+	</select>
+    
+   
+    
+    <!-- 카테고리 -->
+    <select id="list" resultType="clientGoodsVO">
+    	select  * from goodsinfo where category = #{category}
+    </select>
+    
+    <!-- 상품 댓글 작성 -->
+    <insert id="registReply">
+		 insert into tbl_reply (goodsNum, id, repNum, repContents)
+    	 values (#{goodsNum}, #{id}, reply_seq.nextval, #{repContents})
+	</insert>
+
+	<!-- 카트 담기 -->
+	<insert id="addCart" parameterType="cartVO">
+		insert into cart (cartNum, id, goodsNum, cartStock,goodsSize)
+	     values (cart_seq.nextval, #{id}, #{goodsNum}, #{cartStock},#{goodsSize})
+	</insert>
+
+	<!-- 카트 리스트 -->
+	<select id="cartList" resultType="cartListVO">
+		select
+		row_number() over(order by c.cartNum desc) as num,
+		c.cartNum, c.id, c.goodsNum, c.cartStock, c.addDate,
+		g.goodsName, g.goodsPrice, g.goodsThumbImage, c.goodsSize
+		from cart c
+		inner join goodsinfo g
+		on c.goodsNum = g.goodsNum
+		where c.id = #{id}
+	</select>
+    
+	<!-- 카트 삭제 -->
+	<delete id="deleteCart">
+		 delete cart
+		     where cartNum = #{cartNum}
+		         and id = #{id}
+	</delete>
+	
+	<!-- 카트 비우기 -->
+	<delete id="deleteAllCart">
+		delete cart where id=#{id}
+	</delete>
+	
+	<!-- 주문 정보 -->
+	<insert id="orderInfo" parameterType="clientOrderVO">
+		insert into orderinfo(orderId, id, orderRec, address , orderTel, amount,email,name,ordermessage,goodsName)
+		values(#{orderId}, #{id}, #{orderRec}, #{address},	#{orderTel}, #{amount},#{email},#{name},#{orderMessage},#{goodsName})
+	</insert>
+
+	<!-- 주문 상세 정보 -->
+	<insert id="orderInfo_Details" parameterType="clientOrderdetailVO">
+		insert into order_details(orderDetailsNum, orderId, goodsNum, cartStock)
+		select order_details_seq.nextval, #{orderId}, goodsNum, cartStock
+		from cart
+	</insert>
+
+	<!-- 특정 유저의 주문 목록 -->
+	<select id="orderList" resultType="clientOrderVO">
+		select
+		orderId, id, orderRec,address, orderTel, amount,orderDate,goodsName,delivery
+		from orderinfo
+		where id = #{id}
+	</select>
+
+	<!-- 특정 주문 목록 -->
+	<select id="orderView" resultType="clientOrderVO">
+		select
+		o.orderId, o.id, o.orderRec, o.address,
+		o.orderTel, o.amount, o.orderDate,o.delivery,
+		d.orderDetailsNum, d.goodsNum, d.cartStock,
+		g.goodsName, g.goodsThumbImage, g.goodsPrice
+		from orderinfo o
+		inner join order_details d
+		on o.orderId = d.orderId
+		inner join goodsinfo g
+		on d.goodsNum = g.goodsNum
+		where o.id = #{id}
+		and o.orderId = #{orderId}
+	</select>
+</mapper>
+
+
+
+

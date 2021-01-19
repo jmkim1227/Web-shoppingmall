@@ -1,0 +1,27 @@
+
+<!-- saved from url=(0040)https://widgets.cre.ma/target/init_event -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript">
+  function randomString(length, chars) {
+    var result = '';
+    for (var i = length; i > 0; --i) result += chars[Math.floor(Math.random() * chars.length)];
+    return result;
+  }
+
+  window.onload = function() {
+    var device_token = ''
+    try {
+      device_token = window.localStorage.getItem("device_token");
+      if (!device_token) {
+        device_token = randomString(16, '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ');
+        window.localStorage.setItem("device_token", device_token);
+      }
+    } catch(e) {
+      device_token = ''
+    }
+    window.parent.postMessage({
+      action: "return-device-token",
+      device_token: device_token
+    }, '*');
+  }
+</script>
+</head><body></body></html>

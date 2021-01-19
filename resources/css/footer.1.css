@@ -1,0 +1,52 @@
+/* BASIC css start */
+/* �ϴ� */
+#footer { margin-top:150px; position:relative; width:100%; background:#3d3d3d }
+#footer .footerArea { margin:0 auto; padding:65px 0 60px; position:relative; width:1300px; *zoom:1 }
+#footer .footerArea:after { display:block; clear:both; content:'' }
+#footer .footerArea .leftInfoArea { float:left; width:258px }
+#footer .footerArea .leftInfoArea .fSns { padding:35px 0 0 18px; font-size:0 }
+#footer .footerArea .leftInfoArea .fSns a { display:inline-block; margin-left:2px; width:40px; height:40px; font-size:28px; color:#999; text-align:center; line-height:40px }
+#footer .footerArea .leftInfoArea .fSns a .ic_bl { display:block; margin:11px auto 0; width:24px; height:20px; text-indent:-9999em; background:url(/design/akiiikr/phps/common/ico_fblog.png) 0 0 no-repeat }
+#footer .footerArea .leftInfoArea .fEscrow { padding-top:60px }
+#footer .footerArea .leftInfoArea .fEscrow img { margin-left:25px; vertical-align:middle }
+#footer .footerArea .rightInfoArea { padding-left:57px; float:left; width:984px; border-left:1px solid #585858; *zoom:1 }
+#footer .footerArea .rightInfoArea:after { display:block; clear:both; content:'' }
+#footer .footerArea .rightInfoArea .shopInfoArea { padding-right:36px; float:left; width:700px }
+#footer .footerArea .rightInfoArea .shopInfoArea .linkInfo { padding-top:4px }
+#footer .footerArea .rightInfoArea .shopInfoArea .linkInfo ul { *zoom:1 }
+#footer .footerArea .rightInfoArea .shopInfoArea .linkInfo ul:after { display:block; clear:both; content:'' }
+#footer .footerArea .rightInfoArea .shopInfoArea .linkInfo li { float:left; font-size:0 }
+#footer .footerArea .rightInfoArea .shopInfoArea .linkInfo li a { display:inline-block; padding:2px 13px; position:relative; font-size:14px; color:#999; vertical-align:top }
+#footer .footerArea .rightInfoArea .shopInfoArea .linkInfo li a:after { position:absolute; top:3px; left:0; width:1px; height:14px; background:#656565; content:'' }
+#footer .footerArea .rightInfoArea .shopInfoArea .linkInfo li.lang a { margin-right:5px; padding:0 }
+#footer .footerArea .rightInfoArea .shopInfoArea .linkInfo li.lang a span { display:block; width:31px; height:20px; text-indent:-9999em; background:url(/design/akiiikr/phps/common/sp_lang.png) 0 0 no-repeat }
+#footer .footerArea .rightInfoArea .shopInfoArea .linkInfo li.lang a span.ic_en { background-position:0 0 }
+#footer .footerArea .rightInfoArea .shopInfoArea .linkInfo li.lang a span.ic_cn { background-position:0 -20px }
+#footer .footerArea .rightInfoArea .shopInfoArea .linkInfo li.lang a span.ic_jp { background-position:0 -40px }
+#footer .footerArea .rightInfoArea .shopInfoArea .linkInfo li.lang a:after,
+#footer .footerArea .rightInfoArea .shopInfoArea .linkInfo li.first a:after { display:none }
+#footer .footerArea .rightInfoArea .shopInfoArea .shopInfo { padding-top:30px; font-size:13px; color:#999 }
+#footer .footerArea .rightInfoArea .shopInfoArea .shopInfo .tx { line-height:23px }
+#footer .footerArea .rightInfoArea .shopInfoArea .shopInfo .tx span { display:inline-block; padding:0 12px; position:relative }
+#footer .footerArea .rightInfoArea .shopInfoArea .shopInfo .tx span.first { padding-left:0 }
+#footer .footerArea .rightInfoArea .shopInfoArea .shopInfo .tx span:after { position:absolute; top:6px; left:0; width:1px; height:12px; background:#999; content:'' }
+#footer .footerArea .rightInfoArea .shopInfoArea .shopInfo .tx span.first:after { display:none }
+#footer .footerArea .rightInfoArea .shopInfoArea .shopInfo .tx a { font-size:13px; color:#999; line-height:23px; vertical-align:top }
+#footer .footerArea .rightInfoArea .shopInfoArea .returnAddr { padding-top:30px; *zoom:1 }
+#footer .footerArea .rightInfoArea .shopInfoArea .returnAddr:after { display:block; clear:both; content:'' }
+#footer .footerArea .rightInfoArea .shopInfoArea .returnAddr dt { float:left; width:110px; font-size:15px; color:#fff; font-weight:600 }
+#footer .footerArea .rightInfoArea .shopInfoArea .returnAddr dd { float:left; width:590px; font-size:13px; color:#999; line-height:18px }
+#footer .footerArea .rightInfoArea .shopInfoArea .copy { padding:17px 0 10px; font-size:13px; color:#999 }
+#footer .footerArea .rightInfoArea .csInfoArea { float:left; width:248px }
+#footer .footerArea .rightInfoArea .csInfoArea h3 { font-size:15px; color:#fff; font-weight:600 }
+#footer .footerArea .rightInfoArea .csInfoArea .tel { padding-top:10px; font-size:20px; color:#fff; font-weight:600 }
+#footer .footerArea .rightInfoArea .csInfoArea .tel span { font-size:18px }
+#footer .footerArea .rightInfoArea .csInfoArea .tx { padding-top:5px; font-size:14px; color:#999; line-height:18px }
+#footer .footerArea .rightInfoArea .csInfoArea .bankInfo { padding-top:32px }
+
+
+
+
+
+/* BASIC css end */
+

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+    PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<!-- Client -->
+		<typeAlias alias="memberVO" type="com.spring.common.member.MemberVO"/>
+		<typeAlias alias="clientGoodsVO" type="com.spring.client.goods.vo.ClientGoodsVO"/>
+		<typeAlias alias="cartVO" type="com.spring.client.cart.vo.CartVO"/>
+		<typeAlias alias="cartListVO" type="com.spring.client.cart.vo.CartListVO"/>
+		<typeAlias alias="clientOrderVO" type="com.spring.client.order.vo.ClientOrderVO"/>
+		<typeAlias alias="clientOrderDetailVO" type="com.spring.client.order.vo.ClientOrderDetailVO"/>
+
+
+		<!-- Admin -->
+		<typeAlias alias="adminVO" type="com.spring.admin.login.vo.AdminVO"/>
+		<typeAlias alias="adminGoodsVO" type="com.spring.admin.goods.vo.AdminGoodsVO"/>
+		<typeAlias alias="adminOrderVO" type="com.spring.admin.order.vo.AdminOrderVO"/>
+		<typeAlias alias="adminOrderDetailVO" type="com.spring.admin.order.vo.AdminOrderDetailVO"/>
+		
+		
+	</typeAliases>
+</configuration>

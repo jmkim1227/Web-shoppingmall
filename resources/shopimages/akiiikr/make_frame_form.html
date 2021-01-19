@@ -1,0 +1,109 @@
+
+<!-- saved from url=(1533)https://push.snapfit.co.kr/Spm_Mgr/make_frame_form?%7B%22sf_store_name%22%3A%22akiii%22%2C%22device_type%22%3A%22pc%22%2C%22url%22%3A%22http%3A%2F%2Fwww.akiii.co.kr%2F%22%2C%22adminPushID%22%3A%22%22%2C%22solution_type%22%3A%22makeshop%22%2C%22page_type%22%3A%22sq_main_page%22%2C%22referrerUrl%22%3A%22https%3A%2F%2Fsearch.naver.com%2Fsearch.naver%3Fwhere%3Dnexearch%26sm%3Dtop_hty%26fbm%3D1%26ie%3Dutf8%26query%3D%EC%95%84%ED%82%A4%ED%81%B4%EB%9E%98%EC%8B%9D%22%2C%22todayBannerStatus%22%3A%22%22%2C%22spmislive%22%3A%221%22%2C%22useKakao%22%3A%220%22%2C%22useDelegate%22%3A%220%22%2C%22kakaoDevKey%22%3A%22c2bf0329426d3b667166c9ce89d79e4e%22%2C%22kakaoDelegate%22%3A%221%22%2C%22bannerDelegate%22%3A%220%22%2C%22delegateBannerImage%22%3A%22%2F%2Fsnapvi.ecn.cdn.infralab.net%2Fsnapfit%2Fimage%2Fnew_delegate_banner.jpg%22%2C%22delegateBannerIcon%22%3A%22%2F%2Fsnapvi.ecn.cdn.infralab.net%2Fsnapfit%2Fimage%2Fdelegate_ico.png%22%2C%22kakaoBannerImage%22%3A%22%2F%2Fsnapvi.ecn.cdn.infralab.net%2Fsnapfit%2Fimage%2Fnew_kakao_banner.jpg%22%2C%22kakaoBannerIcon%22%3A%22%2F%2Fsnapvi.ecn.cdn.infralab.net%2Fsnapfit%2Fimage%2Fkakao_ico.png%22%2C%22delegateBannerLogin%22%3Atrue%2C%22idsyncstatus%22%3A%22%22%2C%22user_id%22%3A%22mbc4553%22%2C%22spm_spmuserid_pc%22%3A%2235c7da7678c0706c88bc17a42c402ceb%22%2C%22spm_spmuserid_m%22%3A%22%22%2C%22pageinfo%22%3A%7B%22pagetype%22%3A%22sq_main_page%22%2C%22cate%22%3A%22sq_main_page%22%2C%22itemcate%22%3Anull%7D%2C%22pushlogo%22%3A%22%22%2C%22popup_id%22%3A0%2C%22result%22%3A%22success%22%7D -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link href="./css" rel="stylesheet"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"><link href="./icon" rel="stylesheet"><link href="./css" rel="stylesheet"></head><body><div id="spm_d_banner_main_page">
+    <input type="hidden" id="sf_store_name" style="display: none" value="akiii">
+    <input type="hidden" id="device_type" style="display: none" value="pc">
+    <input type="hidden" id="pagetype" style="display: none" value="sq_main_page">
+    <input type="hidden" id="itemno" style="display: none" value="">
+    <input type="hidden" id="cateno" style="display: none" value="sq_main_page">
+    <input type="hidden" id="itemcate" style="display: none" value="">
+    <input type="hidden" id="user_id" style="display: none" value="mbc4553">
+    <input type="hidden" id="spm_spmuserid_pc" style="display: none" value="35c7da7678c0706c88bc17a42c402ceb">
+    <input type="hidden" id="spm_spmuserid_m" style="display: none" value="">
+    <input type="hidden" id="adminPushID" style="display: none" value="">
+    <input type="hidden" id="referrerUrl" style="display: none" value="https://search.naver.com/search.naver?where=nexearch&amp;sm=top_hty&amp;fbm=1&amp;ie=utf8&amp;query=아키클래식">
+    <input type="hidden" id="currentUrl" style="display: none" value="http://www.akiii.co.kr/">
+    <input type="hidden" id="todayShowBanner" style="display: none" value="">
+    <input type="hidden" id="basket_total" style="display: none" value="">
+</div>
+
+<script>
+    
+    var snapfit_StoreID = 'akiii';
+    var is_load_logicjs = false;
+    var sfsnapfitScript = [
+        '//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js',
+        '//cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.6/js/swiper.js',
+        '//cdn.snapfit.co.kr/js/spm_d_common.js?v=20200826',
+    ];
+    for (var i in sfsnapfitScript) {
+        scr = document.createElement('script');
+        scr_src = sfsnapfitScript[i];
+        scr.setAttribute('src', scr_src);
+        scr.setAttribute('type', 'text/javascript');
+        scr.setAttribute('charset', 'utf-8');
+        document.getElementsByTagName('body')[0].appendChild(scr);
+    }
+
+    var sfspmInstance;
+    var sfspmSubmoduleInstance;
+
+    if (typeof(spm_base_object) == "undefined") {
+        var i = 0;
+        var sf_inter = setInterval(function () {
+            if (i > 20) {
+                clearInterval(sf_inter);
+            }
+            if (typeof(spm_base_object) != "undefined" && typeof(jQuery) != 'undefined') {
+                sfspmInstance = new spm_base_object();
+                if (typeof(spm_base_object.subModule) == 'function') {
+                    clearInterval(sf_inter);
+                    sfspmSubmoduleInstance = new spm_base_object.subModule();
+                    load_sub_modules();
+                }
+            }
+            i++;
+        }, 300);
+
+    } else {
+        sfspmInstance = new spm_base_object();
+        if (typeof(spm_base_object.subModule) == 'function') {
+            sfspmSubmoduleInstance = new spm_base_object.subModule();
+            load_sub_modules();
+        }
+    }
+
+    function load_sub_modules() {
+        if(0){
+          window.parent.postMessage(JSON.stringify({e: 'spm_use_kakao', params: {data: {kakaoDevKey:"c2bf0329426d3b667166c9ce89d79e4e",useBanner:"0",kakaoBannerImage:"//snapvi.ecn.cdn.infralab.net/snapfit/image/new_kakao_banner.jpg",kakaoBannerIcon:"//snapvi.ecn.cdn.infralab.net/snapfit/image/kakao_ico.png",delegateBannerLogin:"1"}}}), '*');
+        }
+
+        if(0){
+          window.parent.postMessage(JSON.stringify({e: 'spm_use_delegate',params:{data:{useBanner:"0",isWebView:"",delegateBannerImage:"//snapvi.ecn.cdn.infralab.net/snapfit/image/new_delegate_banner.jpg",delegateBannerIcon:"//snapvi.ecn.cdn.infralab.net/snapfit/image/delegate_ico.png",delegateBannerLogin:"1"}}}), '*');
+        }
+
+        if (0) {
+        window.parent.postMessage(JSON.stringify({e: 'spm_make_popup',params:{popup_id:"0", device:"pc", sf_store_name:"akiii", spm_spmuserid:"35c7da7678c0706c88bc17a42c402ceb"}}), '*');
+        }
+
+        /**
+         * 스냅비 서브 객체 핏 인스턴스 모듈
+         **/
+        $.ajax({
+            url: '//cdn.snapfit.co.kr/js/spm_d_banner.js?v=20190211',
+            contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+            dataType: 'script', cache: true, async: false, timeout: 1000,
+        }).done(function () {
+            var i = 0;
+            var sf_interval = setInterval(function () {
+                var isload = true;//어떤 로드가 먼저되고 spm_banner_logic_object_Instance를 사용해야 하는 경우에 사용 로드가 될 때 까지 기다림. 아직은 그런게 없으니 pass ex)sfspmInstance.get_is_load_sf_recomment_view_css ();
+                // var lsload2 = sfspmInstance.get_is_load_sf_recomment_view_css();
+                //var islive = //;
+
+                ++i;
+                if (isload == true || i > 10) {
+                    clearInterval(sf_interval);
+                    var sf_snap_call_module =  'spm_init';
+
+                    if (sf_snap_call_module && typeof(sf_snap_call_module) != 'undefined') {
+                        //sfspmSubmoduleInstance.sfsnapfitHTML = "//";
+                        if (sf_snap_call_module == 'spm_init') {
+                            // sfspmSubmoduleInstance.draw("#spm_d_banner_main_page", sfspmSubmoduleInstance.sfsnapfitHTML, false);
+                            //spm_banner_logic_object_Instance.init_common_m();
+                        }
+                    }
+                }
+            }, 200);
+        });
+    }
+</script><script src="./jquery.min.js.다운로드" type="text/javascript" charset="utf-8"></script><script src="./swiper.js.다운로드" type="text/javascript" charset="utf-8"></script><script src="./spm_d_common.js.다운로드" type="text/javascript" charset="utf-8"></script></body></html>

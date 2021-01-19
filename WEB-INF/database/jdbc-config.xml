@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations"
+               value="WEB-INF/properties/db.properties" />
+    </bean>
+
+		<!-- DataSource -->
+	<bean id="dataSource"
+		class="org.apache.commons.dbcp2.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName"
+			value="${db.driverClassName}"></property>
+		<property name="url"
+			value="${db.url}"></property>
+		<property name="username" value="${db.username}"></property>
+		<property name="password" value="${db.password}"></property>
+	</bean>
+
+	<!--  마이 바티스 -->
+    <bean id="sqlSessionFactory"
+		class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="configLocation"
+			value="WEB-INF/mybatis/mybatis-config.xml" />
+		<property name="mapperLocations"
+			value="WEB-INF/mybatis/*mapper.xml" />	
+	</bean>
+	<bean id="sqlSession"
+		class="org.mybatis.spring.SqlSessionTemplate"
+		destroy-method="clearCache">
+		<constructor-arg name="sqlSessionFactory"
+			ref="sqlSessionFactory"></constructor-arg>
+	</bean>
+
+</beans>

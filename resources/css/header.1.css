@@ -1,0 +1,93 @@
+/* BASIC css start */
+#mask { display:none; position:fixed; top:0; left:0; right:0; bottom:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index:200 }
+
+
+input:-internal-autofill-selected {
+    background-color: rgb(255, 255, 255) !important;
+    background-image: none !important;
+    color: -internal-light-dark-color(black, white) !important;
+}
+
+/* topEvt ����̺�Ʈ��� */
+.topEvt { width: 100%; height: 40px; text-indent: -10px;  background: #7b131b; overflow:hidden }
+.topEvt p { display: block; width: 100%; height: 100%;     text-align: center; }
+.topEvt p a { position: relative; max-width: 1300px; font-size: 15px; color: #fff; margin: 0 auto; vertical-align: middle; text-align: center; line-height: 40px; }
+.topEvt p i { position: absolute; right: 50%;  margin-right: -650px; float: right; width: 24px; line-height: 40px; font-size: 24px; text-align: right; z-index:1; color: #fff; }
+.topEvt div:nth-child(2) { background: #57abe6; }
+.topEvt div:nth-child(3) { background: #000000; }
+.topEvt div:nth-child(4) { background: #000000; }
+
+
+/* header */
+#header { position:relative; width:100%; height:96px }
+#header .header { position:relative; background:#fff; z-index:100 }
+#header .header.active { position:fixed; top:0; left:0 ; right:0}
+#header .headerTnb { margin:0 auto; margin-top: 24px; position:relative; width:1300px; height:31px;  *zoom:1 }
+#header .headerTnb:after { display:block; clear:both; content:'' }
+#header .headerTnb .tnbLeft { float:left }
+#header .headerTnb .tnbLeft li { padding-right:9px; float:left }
+#header .headerTnb .tnbLeft li a { display:block; height:45px; color:#6d6d6d; line-height:45px }
+#header .headerTnb .tnbLeft li.noticeLine { padding-left:23px }
+#header .headerTnb .tnbLeft li.noticeLine p { padding-left:21px; background:url(//image.makeshop.co.kr/makeshop/d3/basic_simple/common/ico_volume.gif) 0 17px no-repeat }
+#header .headerTnb .tnbLeft li.noticeLine p a { font-size:11px; color:#7a7a7a; line-height:49px; line-height:53px \0/IE8+9 }
+#header .headerTnb .tnbRight { float:right }
+#header .headerTnb .tnbRight li { padding-left:10px; float:left }
+#header .headerTnb .tnbRight li a { display:block; font-size: 13px; color:#999; }
+
+#header .headerTop { margin:0 auto; position:relative; width:1300px; height:65px; *zoom:1 }
+#header .headerTop:after { display:block; clear:both; content:'' }
+#header .headerTop .tlogo { margin:0 210px; padding-top:12px; text-align:center }
+
+#header .headerTop .menuIcons { position:absolute; top:0; right:0 }
+#header .headerTop .menuIcons ul li { position: relative; display: inline-block; margin: 17px 7px;  }
+#header .headerTop .menuIcons ul li.search_box { position: relative; }
+#header .headerTop .menuIcons ul li.search_box .search_icon { display: inline-block; width: 27px; height: 26px; background:url("http://www.akiii.co.kr/design/akiiikr/phps/common/main_search.png") no-repeat center; }
+#header .headerTop .menuIcons ul li.search_box .search_icon.active { background:url("http://www.akiii.co.kr/design/akiiikr/phps/common/main_close.png") no-repeat center; }
+#header .headerTop .menuIcons ul li .menu_Btn { display: inline-block; width: 28px; height: 24px; background:url("http://www.akiii.co.kr/design/akiiikr/phps/common/main_menu.png") no-repeat center; }
+#header .headerTop .menuIcons ul li .menu_Btn.active { background:url("http://www.akiii.co.kr/design/akiiikr/phps/common/main_close.png") no-repeat center; }
+#header .headerTop .searchArea { position:absolute; top:0; left:-220px; width:204px; height:40px; border-bottom:1px solid #000; display: none; }
+#header .headerTop .searchArea .search { position:relative; width:204px; height:40px; }
+#header .headerTop .searchArea .search input { padding-left:10px; width:164px; height:39px; line-height:40px; border:none; background:#fff }
+#header .headerTop .searchArea .search a { display:block; position:absolute; top:0; right:0; width:30px; height:40px; text-indent:-9999em; background:url('http://www.akiii.co.kr/design/akiiikr/phps/common/main_search.png') 0 0 no-repeat #fff; }
+
+#header .headerTop .menuList { float: center; padding:10px 0 0 0;  }
+#header .headerTop .menuList .menuDepth_1 { display: inline-block; position: relative; margin-right: 33px; }
+#header .headerTop .menuList .menuDepth_1.last { margin-right:0 }
+#header .headerTop .menuList .menuDepth_1 > a { display: block; width: 100%; height: 100%; line-height: 50px; font-size: 15px; font-weight: 500; }
+#header .headerTop .menuList .menuDepth_1 > a::before { content: ""; position: absolute; left: 50%; right: 50%;  bottom: 10px; height: 2px; z-index: -1; background: #b4222a; -webkit-transition-property: left, right; transition-property: left, right; -webkit-transition-duration: 0.3s; transition-duration: 0.3s; -webkit-transition-timing-function: ease-out; transition-timing-function: ease-out;}
+#header .headerTop .menuList .menuDepth_1 > a:hover:before { left: 0; right: 0; }
+#header .headerTop .menuList .menuDepth_1:hover .menuDepth_2 { display: block; }
+#header .headerTop .menuList .menuDepth_2 { display: inline-block; padding: 15px 20px; position: absolute; top: 50px; left: 50%; transform: translateX(-50%); width: 100px; text-align: center; background: #fff; display: none;  }
+#header .headerTop .menuList .menuDepth_2 li a { line-height: 30px; font-size: 14px; color: #999; font-weight:300;}
+#header .headerTop .menuList .menuDepth_2 li a:hover { text-decoration:underline}
+#header .headerTop .menuList .font_em a { color: #b4222a; }
+
+.headerTop_wrap { position: relative; }
+.totalMenu { position: absolute; display: inline-block; width: 100%; padding: 35px 0 25px 0; top:65px; left: 0; background: #fff; display: none; border-top: 1px solid #f1f1f1;} /* ��ü���¸޴����� */
+.totalMenu .menu_box { width: 1300px; margin: 0 auto; font-size: 0;}
+.totalMenu .menu_box .menu_inner { display: inline-block;; width: 50%; margin-bottom: 50px; vertical-align: top;}
+.totalMenu .menu_box .menu_inner .dl_box { display: table; width: 100%; table-layout: fixed; height: 50px; }
+.totalMenu .menu_box .menu_inner .dl_box dl { display: table-cell; }
+.totalMenu .menu_box .menu_inner .dl_box dl dt { margin-bottom: 25px; }
+.totalMenu .menu_box .menu_inner .dl_box dl dt a { line-height: 24px; font-size: 17px; color: #000; font-weight: 600;  }
+.totalMenu .menu_box .menu_inner .dl_box dl dd a { line-height: 24px; font-size: 14px; color: #999; }
+.totalMenu .menu_box .menu_inner .dl_box dl dd a:hover{text-decoration:underline}
+.totalMenu .menu_box .menu_inner .dl_box .event_banner li:nth-child(1) { margin-bottom: 10px; }
+
+#header .headerGnb { min-width:1100px; border-bottom:1px solid #231f20; display: none; } /* gnb���� */
+#header .headerGnb .gnbInner { margin:0 auto; position:relative; width:1100px }
+#header .headerGnb .gnbInner ul { *zoom:1 }
+#header .headerGnb .gnbInner ul:after { display:block; clear:both; content:'' }
+#header .headerGnb .gnbInner ul li { margin:0 31px; position:relative; float:left }
+#header .headerGnb .gnbInner ul li a { display:block; height:41px; font-size:14px; color:#202020; line-height:41px; white-space:nowrap; -webkit-transform:perspective(1px) translateZ(0); transform:perspective(1px) translateZ(0); box-shadow:0 0 1px transparent }
+#header .headerGnb .gnbInner ul li a:before { content:""; position:absolute; left:50%; right:50%; bottom:0; height:2px; z-index:-1; background:#231f20; -webkit-transition-property:left, right; transition-property:left, right; -webkit-transition-duration:0.3s; transition-duration:0.3s; -webkit-transition-timing-function:ease-out; transition-timing-function:ease-out }
+#header .headerGnb .gnbInner ul li a:active:before,
+#header .headerGnb .gnbInner ul li a:focus:before,
+#header .headerGnb .gnbInner ul li a:hover:before { left:0; right:0 }
+#header .headerGnb .gnbInner ul li a:hover { *height:39px; *border-bottom:2px solid #000; }
+#header .headerGnb .gnbInner ul li.first { padding-left:0 }
+#header .headerGnb .gnbInner ul li.last { padding:0 0 0 40px }
+
+#header .basket_count { position: absolute; top: -4px; right: -9px; display: block; width: 20px; height: 20px; line-height: 20px; border-radius: 50%; background: #b4222a; color: #fff; text-align: center; font-size: 11px; }
+/* BASIC css end */
+

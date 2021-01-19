@@ -1,0 +1,24 @@
+/* BASIC css start */
+#specialEvt { background:transparent; width:auto; height:750px;  overflow:hidden; /*border:1px solid #dedede;*/ }
+#specialEvt > img { display:block; width:580px; height:750px;  }
+#specialEvt .tit-pop { text-align: left; }
+#specialEvt .cont-pop { width: 580px; margin-left: auto; margin-right: auto;  margin:0 auto; padding-bottom: 24px; }
+#specialEvt .cont-pop .cont { min-height: 718px; max-height: 75px; _height: 750px; max-width:580px; background:transparent; }
+#specialEvt .close-wrap { position: relative; padding: 5px 0; color: #FFFFFF; background-color: #000000; }
+#specialEvt .close-wrap .close { position: relative; width: auto;  text-align: left; text-indent:20px; font-size:11px; line-height:12px; }
+#specialEvt .close-wrap .close .btn-close { position: absolute; right: 20px; top: 2px; z-index:9999; }
+
+
+div#MAKESHOPLY0 {clear:both; overflow: visible !important; background:transparent !important; }
+div#MAKESHOPLY1,
+#MAKESHOPLY2,
+#MAKESHOPLY3,
+#MAKESHOPLY4,
+#MAKESHOPLY5,
+#MAKESHOPLY6,
+#MAKESHOPLY7,
+#MAKESHOPLY8,
+#MAKESHOPLY9,
+#MAKESHOPLY10{clear:both; overflow: visible !important; background:transparent !important; margin-top:-15px; font-size:0; line-height:0;z-index:9999 !important; }
+/* BASIC css end */
+

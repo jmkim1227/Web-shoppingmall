@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="com.care.mybatis.adminmapper">
+
+	<!-- 관리자 로그인 -->
+	<select id="admin_check" resultType="adminVO">
+		select * from adminaccount
+		where adminid=#{adminid}
+	</select>
+	
+	    <!--  상품목록 불러오기 -->
+    <select id="goodsList" resultType="adminGoodsVO">
+    	select  * from goodsinfo order by goodsnum desc
+    </select>
+
+    <!-- 상품 조회 -->
+	<select id="goodsView" resultType="adminGoodsVO">
+		 select * from goodsinfo where goodsNum = #{goodsNum}
+	</select>
+	
+	 <!-- 상품 수정 -->
+	<update id="goodsModify">
+		 update goodsinfo set
+		         goodsName = #{goodsName},
+		         category = #{category},
+		         goodsPrice = #{goodsPrice},
+		         goodsStock = #{goodsStock},
+		         goodsContents = #{goodsContents},
+		         goodsImage1 = #{goodsImage1},
+		         goodsThumbImage = #{goodsThumbImage}
+		     where goodsNum = ${goodsNum}
+	</update>
+    
+	<!-- 상품 삭제 -->
+	<delete id="goodsDelete">
+		 delete	goodsinfo where goodsNum = #{goodsNum}
+	</delete>
+
+	<!-- 상품 등록 -->
+	<insert id="goodsRegister" parameterType="adminGoodsVO">
+		insert into goodsinfo
+		(goodsNum,goodsName,category,goodsPrice,goodsStock,goodsContents,goodsImage1,goodsThumbImage)
+		values
+		(goodsinfo_seq.nextval,#{goodsName},#{category},#{goodsPrice},#{goodsStock},#{goodsContents},#{goodsImage1},#{goodsThumbImage})
+	</insert>
+	
+
+	<!-- 모든 유저의 주문 목록 -->
+	<select id="orderList" resultType="adminOrderVO">
+		select
+		orderId, id, orderRec,address,
+		orderTel, amount, orderDate, delivery
+		from orderinfo
+	</select>
+
+
+
+	<!-- 특정 주문 목록 -->
+	<select id="orderView" resultType="adminOrderVO">
+		select
+		o.orderId, o.id, o.orderRec,
+		o.address,
+		o.orderTel, o.amount, o.orderDate, o.delivery,o.delivery,
+		d.orderDetailsNum, d.goodsNum, d.cartStock,
+		g.goodsName, g.goodsThumbImage, g.goodsPrice
+		from orderinfo o
+		inner join order_details d
+		on o.orderId = d.orderId
+		inner join goodsinfo g
+		on d.goodsNum = g.goodsNum
+		where o.orderId = #{orderId}
+	</select>
+
+	<!-- 배송 상태 -->
+	<update id="delivery">
+		update orderinfo
+		set delivery = #{delivery}
+		where orderId = #{orderId}
+	</update>
+
+	<!-- 상품 수량 조절 -->
+	<update id="changeStock">
+		update goodsInfo
+		set goodsStock = goodsStock - #{goodsStock}
+		where goodsNum = #{goodsNum}
+	</update>
+	
+	<!-- 상품 수량 조절 보조 -->
+	<select id="changeStock_sub" resultType="adminOrderDetailVO">
+		select
+			orderId, goodsNum, cartStock
+		from order_details
+			where orderId = #{orderId}
+	</select>
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

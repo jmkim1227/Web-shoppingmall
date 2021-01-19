@@ -1,0 +1,430 @@
+/*
+	- Project : DGG
+	- Author : odini84@gmail.com
+	- Description : makeshop dgg style sheet
+	- Create : 2011-07-02
+	- Modify : YYYY-MM-DD
+	- Version : ver 1.0
+
+	* 수정 주석처리 순서 : 날짜 이름 수정사항
+
+	- MODIFY HISTORY (수정 부분, 수정일 반드시 작성)
+		-
+*/
+
+/*
+========================================================================
+basic
+========================================================================
+*/
+/* reset, form */
+.dgg-w * { margin: 0; padding: 0;}
+.dgg-w { z-index: 1; color: #000; }
+.dgg-w,
+.dgg-w h1,
+.dgg-w h2,
+.dgg-w h3,
+.dgg-w h4,
+.dgg-w h5,
+.dgg-w h6,
+.dgg-w th,
+.dgg-w td { font-size: 12px; line-height: 16px; }
+.dgg-w h1,
+.dgg-w h2,
+.dgg-w h3,
+.dgg-w h4,
+.dgg-w h5,
+.dgg-w h6 { font-weight: normal; }
+.dgg-w a { color: #000; text-decoration: none; }
+.dgg-w li { list-style: none; }
+.dgg-w em { font-style: normal; }
+.dgg-w img { vertical-align: top; border: 0; }
+.dgg-w legend, caption { display: none; }
+.dgg-w table { width: 100%; border-collapse: collapse; border-spacing: 0; table-layout: fixed; }
+.dgg-w table img { vertical-align: middle; }
+.dgg-w th,
+.dgg-w td { vertical-align: middle; }
+.dgg-w th { font-weight: normal; }
+.dgg-w select { font-size: 12px; line-height: 18px; }
+.dgg-w .tb-left,
+.dgg-w .tb-center,
+.dgg-w .tb-right { padding: 0 5px; }
+.dgg-w .tb-left { text-align: left; }
+.dgg-w .tb-center { text-align: center; }
+.dgg-w .tb-right { text-align: right; }
+.dgg-w .tb-bold { font-weight: bold; }
+.dgg-w .chk-rdo { width: 14px; height: 14px; }
+.dgg-w select,
+.dgg-w .chk-rdo,
+.dgg-w .txt-input { vertical-align: middle; }
+.dgg-w .txt-input,
+.dgg-w .txt-area { padding-left: 2px; border: 1px solid #dcdcdc; }
+.dgg-w .txt-input { height: 22px; line-height: 20px; }
+/* blue layer common */
+.dgg-blayer { position: absolute; }
+.dgg-blayer .hd { position: relative; min-height: 36px; _height: 36px; margin-right:-2px; border:2px solid #b0b8e9; background:#7283df url(/images/dgg/dgg_blayer_tbg.gif) repeat-x 0 0; }
+.dgg-blayer .hd .close-layer { position: absolute; right: 15px; top: 50%; margin-top: -9px; text-indent: -9999px; overflow: hidden; width: 20px; height: 19px; background: url(/images/dgg/dgg_blayer_close.gif) no-repeat 0 0; }
+.dgg-blayer .lcont { zoom: 1; color: #666; background-color: #fff; }
+/* blue table common */
+.dgg-w .blue-table { border-top: 2px solid #43a0dd; border-bottom: 2px solid #43a0dd; }
+.dgg-w .blue-table th,
+.dgg-w .blue-table td { padding: 7px 0px 6px; font-size: 11px; }
+.dgg-w .blue-table thead th { font-weight: bold; color: #419fdc; border-bottom: 1px solid #dcdcda; }
+.dgg-w .blue-table tbody td { border-bottom: 1px solid #dcdcda; }
+.dgg-w .blue-table .tb-thumb img  { width: 38px; height: 38px; border: 1px solid #dbdcde; }
+.dgg-w .blue-table dl.prd { font-size: 11px; }
+.dgg-w .blue-table dl.prd dt { font-weight: bold; color: #000; }
+.dgg-w .blue-table dl.prd dd { color: #459fdd; }
+.dgg-w .blue-table tfoot tr th { color: #666; }
+.dgg-w .blue-table tfoot tr th,
+.dgg-w .blue-table tfoot tr td { padding-top: 10px; padding-bottom: 0; }
+.dgg-w .blue-table tfoot tr.last th,
+.dgg-w .blue-table tfoot tr.last td { padding-top: 3px; padding-bottom: 10px; }
+.dgg-w .blue-table tfoot tr.total th,
+.dgg-w .blue-table tfoot tr.total td { padding: 12px 0 11px; background-color: #ebeff2; color: #666; }
+.dgg-w .blue-table tfoot tr.total th strong,
+.dgg-w .blue-table tfoot tr.total td strong { font-size: 20px; color: #42a0de; }
+/*
+========================================================================
+언어선택
+========================================================================
+*/
+/* 영문 */
+.lang-eng * { font-family: Tahoma, Sans-serif; }
+.lang-eng,
+.lang-eng h1,
+.lang-eng h2,
+.lang-eng h3,
+.lang-eng h4,
+.lang-eng h5,
+.lang-eng h6,
+.lang-eng th,
+.lang-eng td { font-size: 11px; line-height: 14px; }
+/* 국문 */
+.lang-kor * { font-family: Dotum, '돋움'; }
+/*
+========================================================================
+오버레이
+========================================================================
+*/
+#dggOverlay { z-index: 0; position: absolute; width: 100%; left: 0px; top: 0px; background: #000; opacity: 0.5; filter: alpha(opacity=50); }
+/*
+========================================================================
+상단 hide layer
+========================================================================
+*/
+#dggHide { font-size: 0; z-index:100000; line-height: 0; white-space: nowrap; }
+/***
+#dggHide .bg-wp,
+#dggHide .bg-w,
+#dggHide a { background: url(/images/dgg/dgg_click_here.gif) no-repeat; }
+***/
+
+    /* mini-theme-type1 */
+    .mini-theme-type1 .bg-w,
+    .mini-theme-type1 { background: url(/makeshop/newmanager/neoimages/okdgg_mini_theme1_bar.gif) no-repeat; }
+
+    /* mini-theme-type2 */
+    .mini-theme-type2 .bg-w,
+    .mini-theme-type2 { background: url(/makeshop/newmanager/neoimages/okdgg_mini_theme2_bar.gif) no-repeat; }
+
+    /* mini-theme-type3 */
+    .mini-theme-type3 .bg-w,
+    .mini-theme-type3 { background: url(/makeshop/newmanager/neoimages/okdgg_mini_theme3_bar.gif) no-repeat; }
+
+    /* mini-theme-type4 */
+    .mini-theme-type4 .bg-w,
+    .mini-theme-type4 { background: url(/makeshop/newmanager/neoimages/okdgg_mini_theme4_bar.gif) no-repeat; }
+
+    /* mini-theme-type5 */
+    .mini-theme-type5 .bg-w,
+    .mini-theme-type5 { background: url(/makeshop/newmanager/neoimages/okdgg_mini_theme5_bar.gif) no-repeat; }
+
+    /* mini-theme-type6 */
+    .mini-theme-type6 .bg-w,
+    .mini-theme-type6 { background: url(/makeshop/newmanager/neoimages/okdgg_mini_theme6_bar.gif) no-repeat; }
+
+    /* mini-theme-type7 */
+    .mini-theme-type7 .bg-w,
+    .mini-theme-type7 { background: url(/makeshop/newmanager/neoimages/okdgg_mini_theme7_bar.gif) no-repeat; }
+
+    /* mini-theme-type8 */
+    .mini-theme-type8 .bg-w,
+    .mini-theme-type8 { background: url(/makeshop/newmanager/neoimages/okdgg_mini_theme8_bar.gif) no-repeat; }
+
+    /* mini-theme-type9 */
+    .mini-theme-type9 .bg-w,
+    .mini-theme-type9 { background: url(/makeshop/newmanager/neoimages/okdgg_mini_theme9_bar.gif) no-repeat; }
+
+    /* mini-theme-type10 */
+    .mini-theme-type10 .bg-w,
+    .mini-theme-type10 { background: url(/makeshop/newmanager/neoimages/okdgg_mini_theme10_bar.gif) no-repeat; }
+
+#dggHide .bg-wp,
+#dggHide .bg-w { display: inline-block; height: 28px; }
+#dggHide .bg-wp { padding-left: 96px; background-position: 0px 0px; }
+#dggHide .bg-w { position: relative; left: 10px; padding-right: 14px; background-position: right 0px; }
+#dggHide a { overflow: hidden; position: relative; top: 4px; left: 5px; margin-right: 2px; display: inline-block; width: 21px; height: 17px; }
+#dggHide a span { visibility: hidden; }
+#dggHide a.kor { background-position: 0px -28px; }
+#dggHide a.usa { background-position: -22px -28px; }
+#dggHide a.jp { background-position: -44px -28px; }
+#dggHide a.cn { background-position: -66px -28px; }
+
+
+/*
+========================================================================
+상단 bar 
+========================================================================
+*/
+
+
+/* bar */
+/* clip: rect(0 100% 100% 0); */
+#dggTbar { position: absolute; z-index: 100000; clear: both; display: none; left: 0px; top: 0px; width: 100%; zoom: 1; height: 30px; text-align: center; color: #000; }
+#dggTbar .hide-tbar { position: absolute; right: 10px; top: 7px; padding: 0 5px; height: 14px; line-height: 14px; font-weight: bold; color: #fff; font-family: Comic Sans MS; }
+#dggTbar .translate-tbar { position: absolute; right: 30px; top: 7px; padding: 0 5px; height: 14px; line-height: 14px; font-weight: bold; color: #fff; font-family: Comic Sans MS; }
+#dggTbar #tbar_language img { width: 21px; height: 17px; }
+#dggTbar .cont-w { zoom: 1; margin-left: auto; margin-right: auto; }
+#dggTbar .cont-w:after { content: ""; display: block; clear: both; }
+#dggTbar .cont { padding-top: 7px; }
+#dggTbar .cont-l { float: left; zoom: 1; overflow: hidden; }
+#dggTbar .cont-r { float: right; position: relative; }
+#dggTbar img { vertical-align: top; }
+#dggTbar .bi,
+#dggTbar .shop-box,
+#dggTbar .shop-box dd,
+#dggTbar .link,
+#dggTbar .link li { display: inline; line-height: 14px; vertical-align: middle; }
+#dggTbar .bi { width: 78px; height: 20px; float: left; position: relative; margin-top: -3px; margin-right: 8px; cursor: pointer; background-repeat: no-repeat; background-position: 0 0; }
+#dggTbar .shop-box { float: left; }
+#dggTbar .shop-box dt { display: none; }
+#dggTbar .shop-box dd.info { margin-right: 15px; font-weight: bold; }
+#dggTbar span.name-ellipsis { display: inline-block; overflow: hidden; margin-right: 2px; line-height: 14px; text-overflow: ellipsis; white-space: nowrap; word-wrap: normal; vertical-align: middle; }
+#dggTbar .url { padding-left: 15px; margin-right: 30px; color: #fff; background: url(/images/dgg/dgg_icon_homew.gif) no-repeat 0 1px;}
+#dggTbar .con { margin-right: 10px; }
+#dggTbar .con strong { color: #fff; }
+#dggTbar .con em { font-weight: bold; }
+#dggTbar .link { position: absolute; top: 7px; right: 0px; }
+#dggTbar .link li a { display: inlne-block; padding-left: 8px; margin-left: 7px; font-size: 11px; font-weight: bold; line-height: 13px; border-left: 1px solid #2c81b8; }
+#dggTbar .link li img { position: relative; vertical-align: top; }
+#dggTbar .link li a span { font-weight: normal; }
+#dggTbar .link li.first a { margin-left: 0; padding-left: 0; border-left: 0; }
+#dggTbar .link li a:hover { color: #fff; }
+
+#tbar_postbox, 
+#tbar_cart { font-family: Tahoma; font-size: 11px; font-weight: bolder; }
+#tbar_postbox a:hover { text-decoration: none; color: #000; }
+
+	/* theme-type1 */
+	
+	.theme-type1 { background: url(/images/dgg/dgg_bar_bg_type1.gif) repeat-x 0 0; }
+	#dggTbar.theme-type1 .bi { background: url(/images/dgg/okdgg_top_theme-logo01.png) no-repeat 0 0; }
+	#dggTbar.theme-type1 .shop-box dd.url { color: #fff; background-image: url(/images/dgg/dgg_bar_home_type1.gif); }
+	#dggTbar.theme-type1 .con strong { color: #fff; }
+	
+	/* theme-type2 */
+	
+	.theme-type2 { background: url(/images/dgg/dgg_bar_bg_type2.gif) repeat-x 0 0; }
+	#dggTbar.theme-type2 .bi { background: url(/images/dgg/okdgg_top_theme-logo02.png) no-repeat 0 0; }
+	#dggTbar.theme-type2 .shop-box dd.url { color: #666; background-image: url(/images/dgg/dgg_bar_home_type2.gif); }
+	#dggTbar.theme-type2 .con strong { color: #666; }
+	
+	/* theme-type3 */
+
+	.theme-type3 { background: url(/images/dgg/dgg_bar_bg_type3.gif) repeat-x 0 0; }
+	#dggTbar.theme-type3 .bi { background: url(/images/dgg/okdgg_top_theme-logo03.png) no-repeat 0 0; }
+	#dggTbar.theme-type3 .shop-box dd.url { color: #666; background-image: url(/images/dgg/dgg_bar_home_type3.gif); }
+	#dggTbar.theme-type3 .con strong { color: #c3c3c3; }
+	#dggTbar.theme-type3 .con img,
+	#dggTbar.theme-type3 .link li img { opacity: 0.5; filter: alpha(opacity=50); }
+	
+	/* theme-type4 */
+	
+	.theme-type4 { background: url(/images/dgg/dgg_bar_bg_type4.gif) repeat-x 0 0; }
+	#dggTbar.theme-type4 .bi { background: url(/images/dgg/okdgg_top_theme-logo04.png) no-repeat 0 0; }
+	#dggTbar.theme-type4 .shop-box dd.url { color: #666; background-image: url(/images/dgg/dgg_bar_home_type4.gif); }
+	#dggTbar.theme-type4 .con strong { color: #888; }
+	
+	/* theme-type5 */
+	
+	.theme-type5 { background: url(/images/dgg/dgg_bar_bg_type5.gif) repeat-x 0 0; }
+	#dggTbar.theme-type5 .bi { background: url(/images/dgg/okdgg_top_theme-logo05.png) no-repeat 0 0; }
+	#dggTbar.theme-type5 .shop-box dd.url { color: #666; background-image: url(/images/dgg/dgg_bar_home_type5.gif); }
+	#dggTbar.theme-type5 .con strong { color: #888; }
+	
+	/* theme-type6 */
+	
+	.theme-type6 { background: url(/images/dgg/dgg_bar_bg_type6.gif) repeat-x 0 0; }
+	#dggTbar.theme-type6 .bi { background: url(/images/dgg/okdgg_top_theme-logo06.png) no-repeat 0 0; }
+	#dggTbar.theme-type6 .shop-box dd.url { color: #666; background-image: url(/images/dgg/dgg_bar_home_type6.gif); }
+	#dggTbar.theme-type6 .con strong { color: #888; }
+	
+	/* theme-type7 */
+	
+	.theme-type7 { background: url(/images/dgg/dgg_bar_bg_type7.gif) repeat-x 0 0; }
+	#dggTbar.theme-type7 .bi { background: url(/images/dgg/okdgg_top_theme-logo07.png) no-repeat 0 0; }
+	#dggTbar.theme-type7 .shop-box dd.url { color: #fff; background-image: url(/images/dgg/dgg_bar_home_type7.gif); }
+	#dggTbar.theme-type7 .con strong { color: #fff; }
+	
+	/* theme-type8 */
+	
+	.theme-type8 { background: url(/images/dgg/dgg_bar_bg_type8.gif) repeat-x 0 0; }
+	#dggTbar.theme-type8 .bi { background: url(/images/dgg/okdgg_top_theme-logo08.png) no-repeat 0 0; }
+	#dggTbar.theme-type8 .shop-box dd.url { color: #666; background-image: url(/images/dgg/dgg_bar_home_type8.gif); }
+	#dggTbar.theme-type8 .con strong { color: #888; }
+	
+	/* theme-type9 */
+	
+	.theme-type9 { background: url(/images/dgg/dgg_bar_bg_type9.gif) repeat-x 0 0; }
+	#dggTbar.theme-type9 .bi { background: url(/images/dgg/okdgg_top_theme-logo09.png) no-repeat 0 0; }
+	#dggTbar.theme-type9 .shop-box dd.url { color: #666; background-image: url(/images/dgg/dgg_bar_home_type9.gif); }
+	#dggTbar.theme-type9 .con strong { color: #888; }
+	
+	/* theme-type10 */
+	
+	.theme-type10 { background: url(/images/dgg/dgg_bar_bg_type10.gif) repeat-x 0 0; }
+	#dggTbar.theme-type10 .bi { background: url(/images/dgg/okdgg_top_theme-logo10.png) no-repeat 0 0; }
+	#dggTbar.theme-type10 .shop-box dd.url { color: #666; background-image: url(/images/dgg/dgg_bar_home_type10.gif); }
+	#dggTbar.theme-type10 .con strong { color: #888; }
+	
+	/* theme-type11 */
+	
+	.theme-type11 { background: url(/images/dgg/dgg_bar_bg_type11.gif) repeat-x 0 0; }
+	#dggTbar.theme-type11 .bi { background: url(/images/dgg/okdgg_top_theme-logo11.png) no-repeat 0 0; }
+	#dggTbar.theme-type11 .shop-box dd.url { color: #fff; background-image: url(/images/dgg/dgg_bar_home_type11.gif); }
+	#dggTbar.theme-type11 .con strong { color: #fff; }
+	
+	/* theme-type12 */
+	
+	.theme-type12 { background: url(/images/dgg/dgg_bar_bg_type12.gif) repeat-x 0 0; }
+	#dggTbar.theme-type12 .bi { background: url(/images/dgg/okdgg_top_theme-logo12.png) no-repeat 0 0; }
+	#dggTbar.theme-type12 .shop-box dd.url { color: #666; background-image: url(/images/dgg/dgg_bar_home_type12.gif); }
+	#dggTbar.theme-type12 .con strong { color: #888; }
+	
+	/* theme-type13 */
+	
+	.theme-type13 { background: url(/images/dgg/dgg_bar_bg_type13.gif) repeat-x 0 0; }
+	#dggTbar.theme-type13 .bi { background: url(/images/dgg/okdgg_top_theme-logo13.png) no-repeat 0 0; }
+	#dggTbar.theme-type13 .shop-box dd.url { color: #666; background-image: url(/images/dgg/dgg_bar_home_type13.gif); }
+	#dggTbar.theme-type13 .con strong { color: #888; }
+
+	/* theme-type14 */
+	
+	.theme-type14 { background: url(/images/dgg/dgg_bar_bg_type13.gif) repeat-x 0 0; }
+	#dggTbar.theme-type14 .bi { background: url(/images/dgg/okdgg_top_theme-logo14.png) no-repeat 0 0; }
+	#dggTbar.theme-type14 .shop-box dd.url { color: #666; background-image: url(/images/dgg/dgg_bar_home_type14.gif); }
+	#dggTbar.theme-type14 .con strong { color: #888; }
+
+/*
+========================================================================
+레이어 - 상점 정보
+========================================================================
+*/
+#dggTbar #dggTshopInfo { position: absolute; width: 420px; display: none; text-align: left; background-color: #fff; border: 1px solid #47a4df; z-index: 100000; }
+#dggTbar #dggTshopInfo .lcont { padding: 20px; }
+#dggTbar #dggTshopInfo .hide-info { position: absolute; right: 0px; bottom: 0px; }
+#dggTbar #dggTshopInfo h2 { zoom: 1; padding-left: 15px; margin-right: 30px; font-size: 12px; font-weight: bold; color: #42a2df; background: url(/images/dgg/dgg_icon_homeb.gif) no-repeat 0 0;}
+#dggTbar #dggTshopInfo dl { position: relative; margin-top: 7px; padding-left: 10px; }
+#dggTbar #dggTshopInfo dl .bull { zoom: 1; position: relative; left: -10px; margin-right: -5px; }
+#dggTbar #dggTshopInfo dt { font-weight: bold; }
+#dggTbar #dggTshopInfo dt,
+#dggTbar #dggTshopInfo dd { display: inline; }
+#dggTbar #dggTshopInfo dd { color: #666; }
+#dggTbar #dggTshopInfo dl.name dd.dsc { display: block; margin-top: 3px; font-size: 11px; }
+#dggTbar #dggTshopInfo dl.email { margin-top: 3px; }
+/*
+========================================================================
+레이어 - 언어설정
+========================================================================
+*/
+#dggTbar #dggTLang { position: absolute; top: 7px; right: 21px; display: none; width: 125px; height:110px; text-align: left; background-color: #fff; border: 1px solid #42a0de; z-index:100000; }
+#dggTbar #dggTLang .lcont { padding: 15px 0px 5px 15px; }
+#dggTbar #dggTLang .lcont h2 { display: none; }
+#dggTbar #dggTLang .lcont li { padding-bottom: 5px; }
+#dggTbar #dggTLang .lcont label { font-weight: bold; }
+#dggTbar #dggTLang .hide-lang { position: absolute; right: 0px; bottom: 0px; }
+	/* theme1 */
+	.lang-theme1 { border-color: #42A0DE !important; }
+	/* theme2 */
+	.lang-theme2 { border-color: #d2d2d2 !important; }
+	/* theme3 */
+	.lang-theme3 { border-color: #d2d2d2 !important; }
+	/* theme4 */
+	.lang-theme4 { border-color: #d2d2d2 !important; }
+/*
+========================================================================
+상품 상세
+========================================================================
+*/
+#dggPrdView { position: absolute; width: 794px; border: 3px solid #3b8ccd; background-color: #fff; }
+#dggPrdView .lcont { zoom: 1; padding: 50px 70px; }
+#dggPrdView .lcont:after { content: ""; display: block; clear: both; }
+#dggPrdView .close-layer { position: absolute; right: 10px; top: 10px; text-indent: -9999px; overflow: hidden; width: 10px; height: 10px; background: url(/images/dgg/dgg_prdview_close.gif) no-repeat 0 0; }
+#dggPrdView .lcont .thumb { float: left; width: 300px; }
+#dggPrdView .lcont .thumb img { width: 298px; border: 1px solid #dcdcdc; }
+#dggPrdView .lcont .info { float: right; width: 315px; padding-top: 15px; }
+#dggPrdView .lcont h2 { font-size: 18px; font-weight: bold; }
+#dggPrdView .lcont .prd-table { margin-top: 10px; }
+#dggPrdView .lcont .prd-table th,
+#dggPrdView .lcont .prd-table td { font-size: 12px; }
+#dggPrdView .lcont .prd-table tbody th,
+#dggPrdView .lcont .prd-table tbody td { padding: 4px 0; border: 0; }
+#dggPrdView .lcont .prd-table tbody th { color: #666; }
+#dggPrdView .lcont .prd-table tbody th span { font-size: 11px; }
+#dggPrdView .lcont .prd-table tbody th .tb-right { padding-left: 0; }
+#dggPrdView .lcont .prd-table tfoot strong { font-family: Tahoma; font-size: 25px; vertical-align: middle; }
+#dggPrdView .lcont .prd-table tfoot th,
+#dggPrdView .lcont .prd-table tfoot td { padding: 20px 10px; }
+#dggPrdView .lcont .prd-table tr.first th,
+#dggPrdView .lcont .prd-table tr.first td { padding-top: 24px; }
+#dggPrdView .lcont .prd-table tr.last th,
+#dggPrdView .lcont .prd-table tr.last td { padding-bottom: 24px; }
+/* btn-foot */
+#dggPrdView .btn-foot { zoom: 1; overflow: hidden; margin-top: 20px; text-align: left; }
+/*
+========================================================================
+해외 구매자를 위한 안내
+========================================================================
+*/
+#dggGuide { width: 796px; background-color: #FFFFFF; border-left: 2px solid #a2aded; border-right: 2px solid #a2aded; border-bottom: 2px solid #a2aded; display: none; position: absolute; z-index: 100000; top: 30px; left: 50%; margin: 0 0 0 -398px; }
+#dggGuide .hd .tit { position: relative; }
+#dggGuide .hd .tit #guide_title { position: absolute; top:-2px; left:-4px; }
+#dggGuide .hd .lang { position: absolute; right: 78px; top: 8px; }
+#dggGuide .hd .lang dt,
+#dggGuide .hd .lang dd,
+#dggGuide .hd .lang ul,
+#dggGuide .hd .lang li,
+#dggGuide .hd .lang li a { float: left; width: auto; }
+#dggGuide .hd .lang li { display: inline; margin-left: 7px; }
+#dggGuide .hd .lang dt { padding-top: 5px; padding-right: 7px; font-weight: bold; color: #fff; font-family: Tahoma; }
+#dggGuide h3 { font-size: 16px; font-weight: bold; color: #000; }
+/* tmsg-w */
+#dggGuide .tmsg-w strong { color: #44a1de; }
+#dggGuide .tmsg-w em { color: #000; font-weight: bold; }
+/* step-w */
+#dggGuide .step-w { zoom:1 ; margin-top: 35px; border-top: 4px solid #a2aded; padding-left: 40px; }
+#dggGuide .step-w:after { content: ""; display: block; clear: both; }
+#dggGuide .step-w li { position: relative; display: inline; float: left; width: auto; margin-left: 20px; padding: 25px 0 20px 30px; font-weight: bold; color: #000; font-size: 14px; letter-spacing: -1px; background: url(/images/dgg/dgg_purchguide_step.gif) no-repeat 0 50%; }
+#dggGuide .step-w li.first { margin-left: 0; padding-left: 0; background: none; }
+#dggGuide .step-w li .step { display: block; position: absolute; top: -17px; left: 50%; margin-left: -3px; width: 34px; height: 34px; }
+#dggGuide .step-w li .step1 { margin-left: -17px; background: url(/images/dgg/dgg_purchguide_step1.gif) no-repeat 0 0;}
+#dggGuide .step-w li .step2 { background: url(/images/dgg/dgg_purchguide_step2.gif) no-repeat 0 0;}
+#dggGuide .step-w li .step3 { background: url(/images/dgg/dgg_purchguide_step3.gif) no-repeat 0 0;}
+#dggGuide .step-w li .step4 { background: url(/images/dgg/dgg_purchguide_step4.gif) no-repeat 0 0;}
+/* bcont-w */
+#dggGuide .bcont-w { zoom: 1; padding: 20px 0px 25px; border-top: 2px solid #43a0dd; border-bottom: 2px solid #43a0dd; }
+#dggGuide .bcont-w:after { content: ""; display: block; clear: both; }
+#dggGuide .bcont-w .btns,
+#dggGuide .bcont-w .txt { float: left; }
+#dggGuide .bcont-w .btns { margin-right: 10px; }
+#dggGuide .bcont-w .txt { float: left; width: 440px; letter-spacing: -1px; }
+#dggGuide .bcont-w .txt p { padding-top: 5px; }
+#dggGuide .bcont-dsc { zoom: 1; overflow: hidden; margin-top: 5px; }
+#dggGuide .bcont-dsc span { float: right; padding-left: 8px; color: #4da8de; background: url(/images/dgg/dgg_bull_h2_gsqr.gif) no-repeat 0 7px; }
+/* btn-foot */
+#dggGuide .btn-foot { margin-top: 20px; text-align: center; }
+#dggGuide .btn-foot a { display: inline-block; padding: 0px 15px; }
+#dggGuide .btn-foot a.btn-blue { margin-right: 5px; background-color: #3589cf; }
+#dggGuide .btn-foot a.btn-gray { margin-right: 0; background-color: #7a8d9c; }
+#dggGuide .btn-foot a span { cursor: pointer; float: left; height: 38px; padding-right: 15px; line-height: 38px; font-weight: bold; font-size: 16px; color: #fff; background: url(/images/dgg/dgg_bull_warow.gif) no-repeat right 50%; }
